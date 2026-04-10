@@ -2,8 +2,7 @@ name: Azure VM Deployment
 
 on:
   push:
-    paths:
-      - 'Azure-VM-CICD-Lab/**'
+    branches: [ "main" ]
 
 jobs:
   deploy:
