@@ -1,0 +1,1 @@
+I built a modular CI/CD pipeline using GitHub Actions to deploy Azure infrastructure using ARM templates. The pipeline authenticates using a service principal and automatically provisions a virtual machine when changes are pushed

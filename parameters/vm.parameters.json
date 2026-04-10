@@ -1,0 +1,7 @@
+{
+  "parameters": {
+    "vmName": { "value": "myCICDVM" },
+    "adminUsername": { "value": "azureuser" },
+    "adminPassword": { "value": "YourPassword123!" }
+  }
+}

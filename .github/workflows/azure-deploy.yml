@@ -1,0 +1,26 @@
+name: Azure VM Deployment
+
+on:
+  push:
+    paths:
+      - 'Azure-VM-CICD-Lab/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Deploy VM
+      uses: azure/arm-deploy@v1
+      with:
+        resourceGroupName: DevOpsLabRG
+        template: Azure-VM-CICD-Lab/templates/vm.json
+        parameters: Azure-VM-CICD-Lab/parameters/vm.parameters.json
